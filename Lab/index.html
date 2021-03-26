@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <title>Lab</title>
+    </head>
+    <style>
+        .background {
+            z-index: -1;
+            position: fixed;
+        }
+      .header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: #c5e2e6;
+      }
+      .header-block {
+        position: relative;
+        padding: 15px;
+      }
+      .title-holder {
+          padding: 10px;
+          float: left;
+      }
+      .subtitle {
+        font-family: sans-serif;
+        font-size: 1.0em;
+      }
+      .name-company {
+        font-family: sans-serif;
+        font-size: 2.0em;
+        font-weight: bolder;
+      }
+      .logo {
+        width: 90px;
+        height: 110px;
+      }
+      .number {
+        font-family: sans-serif;
+        font-size: 2.2em;
+        line-height: 1.2em;      
+    }
+    .feedback {
+        margin-top: 20px;
+        font-family: sans-serif;
+        font-size: 1.6em;
+        font-weight: bolder;
+        border-bottom: 2px dashed #272727;
+        float: right;
+    }
+
+    .menu {
+        background-color: #1133ba;
+        text-align: center;
+        width: 100%;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0px;
+    }
+    li {
+        display: inline-block;
+        position: relative;
+        box-sizing: content-box;
+        padding: 15px 0px;
+        list-style-type: none;
+        font-family: sans-serif;
+        font-size: 1.5em;
+    }
+    .bar-between-menu-items {
+        display: inline-block;
+        color: white;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .menu-text {
+        color: white;
+        text-decoration: none;
+    }
+    </style>
+    
+    <body>
+        <div class="background">
+            <img src="images/background2.jpg" width = "115%">
+
+        </div>
+        <div class="header">
+            <div class="header-block">
+                <div class="title-holder">
+                    <img class="logo" src="images/logo.png">
+                </div>
+                <div style="float: left; margin-left: 5px;">
+                    <br><span class="name-company">Deluxe Auto</span><br><br>
+                    <span class="subtitle">Speed ​​and power</span>
+                </div>
+            </div>
+            <div class="header-block">
+                <span class="number">+7(499) 777-77-77</span><br>
+                <span class="number">+7(499) 777-77-77</span><br>
+                <span class="feedback">Обратная связь</span>
+            </div>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="#" class="menu-text">Главная</a>
+                    <span class="bar-between-menu-items">|</span>
+                </li>
+                <li>
+                    <a href="#" class="menu-text">Каталог</a>
+                    <span class="bar-between-menu-items">|</span>
+                </li>
+                <li>
+                    <a href="#" class="menu-text">Доставка и оплата</a>
+                    <span class="bar-between-menu-items">|</span>
+                </li>
+                <li>
+                    <a href="#" class="menu-text">Прайс лист</a>
+                    <span class="bar-between-menu-items">|</span>
+                </li>
+                <li>
+                    <a href="#" class="menu-text">Контакты</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="">
+            <div class="slider">
+
+            </div>
+            <div class="content">
+
+            </div>
+        </div>
+    </body>
+</html>
