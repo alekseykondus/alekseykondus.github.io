@@ -3,9 +3,12 @@
         <title>Lab</title>
     </head>
     <style>
-        .background {
+        body{
+            margin: 0px;
             z-index: -1;
-            position: fixed;
+            background: url(images/background.jpg) 100% 100% no-repeat;
+            background-attachment: fixed;
+            background-size: 100%;
         }
       .header {
         display: flex;
@@ -76,13 +79,57 @@
         color: white;
         text-decoration: none;
     }
+
+    .slider {
+        position: relative;
+        display: block;
+        width: 60%;
+        height: 100%;
+        margin: auto;
+        padding: 0 10px;
+    }
+    .slide {
+        display: flex;
+        justify-content:space-between;
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        height: 60%;
+        background-position: center center;
+        background-size: cover;
+        opacity: 0;
+        transition: opacity 1s 0s ease-in-out;
+    }
+    .button {
+        position: relative;
+        top: 150px;
+        z-index: 2;
+        width: 30px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #849494;
+        margin: 20px;
+        float: left;
+        opacity: 0.4; 
+    }
+    .prev {
+        position: relative;
+        top: 10px;
+        left: -15px;
+        border: 20px solid transparent; 
+        border-right: 15px solid green;
+    }
+    .next {
+        position: relative;
+        top: 10px;
+        left: 10px;
+        border: 20px solid transparent; 
+        border-left: 15px solid green;
+    }
+
     </style>
     
     <body>
-        <div class="background">
-            <img src="images/background2.jpg" width = "115%">
-
-        </div>
         <div class="header">
             <div class="header-block">
                 <div class="title-holder">
@@ -124,13 +171,15 @@
             </ul>
         </div>
 
-        <div class="">
-            <div class="slider">
-
+        <div class="slider">
+            <div class="slide" style="background-image: url(images/img1.png); opacity: 1;">
+                <div class="button"> <div class="prev"></div></div>
+                <div class="button"> <div class="next"></div></div>
             </div>
-            <div class="content">
+        </div>
+        <div class="content">
 
-            </div>
+        </div>
         </div>
     </body>
 </html>
