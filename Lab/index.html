@@ -1,8 +1,14 @@
 <html>
     <head>
         <title>Lab</title>
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="menu.css">
+        <link rel="stylesheet" href="slider.css">
     </head>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body{
             margin: 0px;
             z-index: -1;
@@ -10,252 +16,95 @@
             background-attachment: fixed;
             background-size: 100%;
         }
-      .header {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        background-color: #c5e2e6;
-      }
-      .header-block {
-        position: relative;
-        padding: 15px;
-      }
-      .title-holder {
-          padding: 10px;
-          float: left;
-      }
-      .subtitle {
-        font-family: sans-serif;
-        font-size: 1.0em;
-      }
-      .name-company {
-        font-family: sans-serif;
-        font-size: 2.0em;
-        font-weight: bolder;
-      }
-      .logo {
-        width: 90px;
-        height: 110px;
-      }
-      .number {
-        font-family: sans-serif;
-        font-size: 2.2em;
-        line-height: 1.2em;      
-    }
-    .feedback {
-        margin-top: 20px;
-        font-family: sans-serif;
-        font-size: 1.6em;
-        font-weight: bolder;
-        border-bottom: 2px dashed #272727;
-        float: right;
-    }
 
-    .menu {
-        background-color: #1133ba;
-        text-align: center;
-        width: 100%;
-    }
-    ul {
-        list-style-type: none;
-        margin: 0px;
-    }
-    li {
-        display: inline-block;
-        position: relative;
-        box-sizing: content-box;
-        padding: 15px 0px;
-        list-style-type: none;
-        font-family: sans-serif;
-        font-size: 1.5em;
-    }
-    .bar-between-menu-items {
-        display: inline-block;
-        color: white;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-    .menu-text {
-        color: white;
-        text-decoration: none;
-    }
-
-    .slider1 {
-        position: relative;
-        display: block;
-        width: 60%;
-        height: 100%;
-        margin: auto;
-        padding: 0 10px;
-    }
-    .slide1 {
-        display: flex;
-        justify-content:space-between;
-        position: absolute;
-        z-index: 0;
-        width: 100%;
-        height: 60%;
-        background-position: center center;
-        background-size: cover;
-        opacity: 0;
-        transition: opacity 1s 0s ease-in-out;
-    }
-    .button {
-        position: relative;
-        top: 150px;
-        z-index: 2;
-        width: 30px;
-        height: 60px;
-        border-radius: 50%;
-        background-color: #849494;
-        margin: 20px;
-        float: left;
-        opacity: 0.4; 
-    }
-    .prev {
-        position: relative;
-        top: 10px;
-        left: -15px;
-        border: 20px solid transparent; 
-        border-right: 15px solid green;
-    }
-    .next {
-        position: relative;
-        top: 10px;
-        left: 10px;
-        border: 20px solid transparent; 
-        border-left: 15px solid green;
-    }
-
-    .container > input {
-        display: none;
-    }
-    .container {
-        position: relative;
-        width: 60%;
-        height: 55%;
-        margin: auto;
-    }
-    .slider, .img {
-        width: 100%;
-        height: 100%;;
-        background-position: center center;
-        background-size: cover;
-    }
-    .slider {
-        position: relative;
-        overflow: hidden;
-        background-color: black;
-        border: 8px solid #eee;
-        border-radius: 5px;
-        box-shadow: 0 7px 20px rgb(0, 0,0, 0.5);
-    }
-    .img {
-        position: absolute;
-        perspective: 500px;
-        /*выравнивание */
-    }
-    .img1 .frag { background-image: url(images/img1.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-
- }    
-    .img2 .frag { background-image: url(images/img2.jpg); 
-        background-repeat: no-repeat;
-        background-size: 100%;
-}
-    .img3 .frag { background-image: url(images/img3.jpeg); 
-        background-repeat: no-repeat;
-        background-size: 100%;
-}
-    .img4 .frag { background-image: url(images/img2.jpg); 
-        background-repeat: no-repeat;
-        background-size: 100%;
-}
-    .img5 .frag { background-image: url(images/img1.png); 
-        background-repeat: no-repeat;
-        background-size: 100%;
-}
-    .img6 .frag { background-image: url(images/img3.jpeg) ; 
-        background-repeat: no-repeat;
-        background-size: 100%;
-}
-    .frag {
-        width: 100%;
-        height: inherit;
-        opacity: 0;
-        z-index: 0;
-        transition: transform .6s, opacity .6s, -webkit-filter 2s ease-out;
-    }
-    #slide1:checked ~ .slider .img1 .frag,
-    #slide2:checked ~ .slider .img2 .frag,
-    #slide3:checked ~ .slider .img3 .frag,
-    #slide4:checked ~ .slider .img4 .frag,
-    #slide5:checked ~ .slider .img5 .frag,
-    #slide6:checked ~ .slider .img6 .frag {
-        opacity: 1;
-        z-index: 1;
-    }
-    .controls {
-        position: absolute;
-        bottom: -50px;
-        left: 50%;
-        margin-left: -115px;
-    }
-    .controls label {
-        display: block;
-        height: 10px;
-        width: 30px;
-        float: left;
-        margin-right: 10px;
-        background-color: white;
-        cursor: pointer;
-        opacity: 0.3;
-        transition: opacity 0.5s;;
-    }
-    .controls label:hover,
-    .side-controls label:hover,
-    #slide1:checked ~ .controls label:nth-of-type(1),
-    #slide2:checked ~ .controls label:nth-of-type(2),
-    #slide3:checked ~ .controls label:nth-of-type(3),
-    #slide4:checked ~ .controls label:nth-of-type(4),
-    #slide5:checked ~ .controls label:nth-of-type(5),
-    #slide6:checked ~ .controls label:nth-of-type(6) {
-        opacity: 0.8;
-    }
+        .content {
+            position: relative;
+            display: inline-block;
+            width: 70%;
+            margin-left: 15%;
+            background-color: blanchedalmond;
+        }
+        .path-section {
+            padding: 7px;
+        }
+        .text-path-section {
+            font-family: sans-serif;
+            text-decoration: none;
+            font-size: 0.9em;
+            color: #000;
+        }
+        .text-path-section:hover {
+            color: cadetblue;
+        }
+        .side-container {
+            width: 20%;
+            background-color: chartreuse;
+            float: left;
+        }
+        .categories-container {
+            list-style-type: none;
+            height: 300px;
+            overflow: hidden;
+        }
+        .inside-categories {
+            list-style-type: square;
+            list-style-position: inside;
+            font-size: 1.0em;
+        }
 
 
-    .side-controls label {
-        position: absolute;
-        top: 45%;
-        margin-top: -10px;
-        display: block;
-        z-index: 1;
-        cursor: pointer;
-        float: left;
-        opacity: 0.4; 
-        transition: opacity 0.5s;
-    }
-    #slide1:checked ~ .side-controls label:nth-of-type(6),
-    #slide2:checked ~ .side-controls label:nth-of-type(1),
-    #slide3:checked ~ .side-controls label:nth-of-type(2),
-    #slide4:checked ~ .side-controls label:nth-of-type(3),
-    #slide5:checked ~ .side-controls label:nth-of-type(4),
-    #slide6:checked ~ .side-controls label:nth-of-type(5) {
-        border: 30px solid transparent; 
-        border-right: 30px solid green;
-    }
-    #slide1:checked ~ .side-controls label:nth-of-type(2),
-    #slide2:checked ~ .side-controls label:nth-of-type(3),
-    #slide3:checked ~ .side-controls label:nth-of-type(4),
-    #slide4:checked ~ .side-controls label:nth-of-type(5),
-    #slide5:checked ~ .side-controls label:nth-of-type(6),
-    #slide6:checked ~ .side-controls label:nth-of-type(1) {
-        margin-left: 95%;
-        border: 30px solid transparent; 
-        border-left: 30px solid green;
-    }
-    </style>
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 80%;
+
+            height: auto;
+            float: left;
+        }
+        .product {
+            margin: 15px;
+            background: linear-gradient(to top, #abf5e0, #de2ff5);
+            background-color: khaki;
+            border: 3px solid khaki;
+            border-radius: 10px;
+            width: 250px;
+            height: 300px;
+            text-align: center;
+        }
+        .product-name {
+            font-family: sans-serif;
+            position: relative;
+            font-size: 1.6em;
+            font-weight: bolder;
+            color: blueviolet;
+        }
+        .product-img {
+            margin: auto;
+            margin-top: 10px;
+            width: 200px;
+            height: 100px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        .product-price {
+            font-family: sans-serif;
+            font-size: 1.6em;
+            font-weight: bolder;
+            color:red;
+        }
+        .product-description {
+            width: 250px;
+            height: 80px;
+            padding: 10px;
+            position: relative;
+            font-family: sans-serif;
+            font-size: 1.0em;
+        }
+        .product-img1 { background-image: url(images/Lamborghini_Sian.jpg); }
+        .product-img2 { background-image: url(images/Tesla_Roadster.jpg); }
+        .product-img3 { background-image: url(images/Renault_Alpine.jpg); }
+        .product-img4 { background-image: url(images/Chevrolet_Corvette.jpg); }
+        </style>
     
     <body>
         <div class="header">
@@ -299,9 +148,7 @@
             </ul>
         </div>
 
-
-        <div class="container">
-    
+        <div class="slider-container">
             <input type="radio" name="slides" id="slide1" checked>
             <input type="radio" name="slides" id="slide2">
             <input type="radio" name="slides" id="slide3">
@@ -311,55 +158,54 @@
             
             <div class="slider">    
               <div class="img img1">
-                <div class="frag frag1"></div>
-                <div class="frag frag2"></div>
-                <div class="frag frag3"></div>
-                <div class="frag frag4"></div>
-                <div class="frag frag5"></div>
-                <div class="frag frag6"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
               </div>
               <div class="img img2">
-                <div class="frag frag1"></div>
-                <div class="frag frag2"></div>
-                <div class="frag frag3"></div>
-                <div class="frag frag4"></div>
-                <div class="frag frag5"></div>
-                <div class="frag frag6"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
               </div>
               <div class="img img3">
-                <div class="frag frag1"></div>
-                <div class="frag frag2"></div>
-                <div class="frag frag3"></div>
-                <div class="frag frag4"></div>
-                <div class="frag frag5"></div>
-                <div class="frag frag6"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
               </div>
               <div class="img img4">
-                <div class="frag frag1"></div>
-                <div class="frag frag2"></div>
-                <div class="frag frag3"></div>
-                <div class="frag frag4"></div>
-                <div class="frag frag5"></div>
-                <div class="frag frag6"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
               </div>
               <div class="img img5">
-                <div class="frag frag1"></div>
-                <div class="frag frag2"></div>
-                <div class="frag frag3"></div>
-                <div class="frag frag4"></div>
-                <div class="frag frag5"></div>
-                <div class="frag frag6"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
               </div>
               <div class="img img6">
-                <div class="frag frag1"></div>
-                <div class="frag frag2"></div>
-                <div class="frag frag3"></div>
-                <div class="frag frag4"></div>
-                <div class="frag frag5"></div>
-                <div class="frag frag6"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
+                <div class="frag"></div>
               </div>
-            </div><!-- /.slider -->
-            
+            </div>
             <div class="side-controls">
                 <label for="slide1"></label>
                 <label for="slide2"></label>
@@ -377,11 +223,64 @@
                 <label for="slide5"></label>
                 <label for="slide6"></label>
             </div>
-            
-          </div><!-- /.container -->
-        <div class="content">
+          </div>
 
+        <div class="content">
+            <div class="path-section">
+                <a href="#" class="text-path-section">Главная</a> / 
+                <a href="#" class="text-path-section">Каталог</a> / 
+                <a href="#" class="text-path-section">Машины</a>
+            </div>
+            <div class="side-container">
+                <ul id="categories-container"> 
+                    <li>Спорткары
+                        <ul class="inside-categories">
+                            <li>sd</li>
+                            <li>sd</li>
+                        </ul>
+                    </li>
+                    <li>Семейные машины</li>
+                    <li>sdfg</li>
+                </ul>
+            </div>
+
+            <div class="products-container">
+                <div class="product">
+                    <div class="product-img product-img1"></div>
+                    <div class="product-name">Lamborghini<br>Sian</div>
+                    <div class="product-description">
+                        Cамый мощным суперкар за всю историю марки       
+                    </div>
+                    <div class="product-price">100 000 $</div>
+                </div>
+                <div class="product">
+                    <div class="product-img product-img2"></div>
+                    <div class="product-name">Tesla<br>Roadster</div>
+                    <div class="product-description">
+                        Cамый мощным суперкар за всю историю марки       
+                    </div>
+                    <div class="product-price">100 000 $</div>
+                </div>
+                <div class="product">
+                    <div class="product-img product-img3"></div>
+                    <div class="product-name">Renault<br>Alpine</div>
+                    <div class="product-description">
+                        Cамый мощным суперкар за всю историю марки       
+                    </div>
+                    <div class="product-price">100 000 $</div>
+                </div>
+                <div class="product">
+                    <div class="product-img product-img4"></div>
+                    <div class="product-name">Chevrolet<br>Corvette</div>
+                    <div class="product-description">
+                        Cамый мощным суперкар за всю историю марки       
+                    </div>
+                    <div class="product-price">100 000 $</div>
+                </div>
+                <div class="product">4</div>
+                <div class="product">5</div>
+            </div>
         </div>
-        </div>
+
     </body>
 </html>

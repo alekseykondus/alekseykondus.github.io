@@ -1,0 +1,33 @@
+
+.menu {
+    background-color: #1133ba;
+    text-align: center;
+    width: 100%;
+}
+ul {
+    list-style-type: none;
+    margin: 0px;
+}
+li {
+    display: inline-block;
+    position: relative;
+    box-sizing: content-box;
+    padding: 15px 0px;
+    list-style-type: none;
+    font-family: sans-serif;
+    font-size: 1.5em;
+}
+.bar-between-menu-items {
+    display: inline-block;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.menu-text {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-text:hover {
+    color: aqua;
+}
