@@ -1,0 +1,154 @@
+
+        .content > input {
+            display: none;
+        }
+
+        .content {
+            position: relative;
+            width: 70%;
+            min-height: 100%;
+            margin-left: 15%;
+            background-color: blanchedalmond;
+        }
+        .path-section {
+            padding: 7px;
+        }
+        .text-path-section {
+            font-family: sans-serif;
+            text-decoration: none;
+            font-size: 0.9em;
+            color: #000;
+        }
+        .text-path-section:hover {
+            color: cadetblue;
+        }
+        .side-container {
+            width: 20%;
+            background-color: chartreuse;
+            float: left;
+        }
+        .categories-container {
+            list-style-type: none;
+            height: 300px;
+            overflow: hidden;
+        }
+        .inside-categories {
+            list-style-type: square;
+            list-style-position: inside;
+            font-size: 1.0em;
+        }
+
+
+        .main-products-container {
+            position: relative;
+            width: 80%;
+            float: left;
+        }
+        .products-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            float: left;
+        }
+        .products-container2 {
+            position: relative;
+            margin-top: -88.6%;
+        }
+        .product {
+            margin: 10px;
+            background: linear-gradient(to top, #abf5e0, #de2ff5);
+            background-color: khaki;
+            border: 3px solid khaki;
+            border-radius: 10px;
+            width: 250px;
+            height: 300px;
+            text-align: center;
+        }
+        .product-name {
+            font-family: sans-serif;
+            position: relative;
+            font-size: 1.6em;
+            font-weight: bolder;
+            color: blueviolet;
+        }
+        .product-img {
+            margin: auto;
+            margin-top: 10px;
+            width: 200px;
+            height: 100px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        .product-price {
+            font-family: sans-serif;
+            font-size: 1.6em;
+            font-weight: bolder;
+            color:red;
+        }
+        .product-description {
+            width: 250px;
+            height: 80px;
+            padding: 10px;
+            position: relative;
+            font-family: sans-serif;
+            font-size: 1.0em;
+        }
+        .product-img1 { background-image: url(images/Lamborghini_Sian.jpg); }
+        .product-img2 { background-image: url(images/Tesla_Roadster.jpg); }
+        .product-img3 { background-image: url(images/Renault_Alpine.jpg); }
+        .product-img4 { background-image: url(images/Chevrolet_Corvette.jpg); }
+        .product-img5 { background-image: url(images/TVR_Griffith.jpg); }
+        .product-img6 { background-image: url(images/Mercedes-AMG_GT.jpg); }
+        .product-img7 { background-image: url(images/Honda_NSX.jpeg); }
+        .product-img8 { background-image: url(images/Subaru_BRZ.jpg); }
+        .product-img9 { background-image: url(images/Audi_e-tron_GT.jpg); }
+        .product-img10 { background-image: url(images/KIA_Stinger.jpg); }
+        .product-img11 { background-image: url(images/BMW_M4.jpg); }
+        .product-img12 { background-image: url(images/Bentley_Bentayga.jpg); }
+
+        .product-frag {
+            position: absolute;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: auto;
+            float: left;
+            opacity: 0;
+            z-index: 0;
+            transition: transform .6s, opacity .6s, -webkit-filter 2s ease-out;
+        }
+#container1:checked ~ .main-products-container .products-container1 .product-frag,
+#container2:checked ~ .main-products-container .products-container2 .product-frag,
+#container3:checked ~ .main-products-container .products-container3 .product-frag,
+#container4:checked ~ .main-products-container .products-container4 .product-frag {
+    opacity: 1;
+    z-index: 1;
+}
+.controls-product {
+    position: relative;
+    margin-top: 80%;
+    top: -30px;
+    width: 100px;
+    left: 50%;
+    z-index: 2;
+    margin-left: -90px;
+}
+.controls-product label {
+    display: block;
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.5s;;
+}
+.controls-product label:hover,
+#container1:checked ~ .controls-product label:nth-of-type(1),
+#container2:checked ~ .controls-product label:nth-of-type(2),
+#container3:checked ~ .controls-product label:nth-of-type(3),
+#container4:checked ~ .controls-product label:nth-of-type(4) {
+    opacity: 1.0;
+    font-size: 2.0em;
+    color:blue;
+}

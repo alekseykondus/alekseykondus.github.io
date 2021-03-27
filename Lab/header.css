@@ -1,40 +1,40 @@
 .header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: #c5e2e6;
-  }
-  .header-block {
-    position: relative;
-    padding: 15px;
-  }
-  .title-holder {
-      padding: 10px;
-      float: left;
-  }
-  .subtitle {
-    font-family: sans-serif;
-    font-size: 1.0em;
-  }
-  .name-company {
-    font-family: sans-serif;
-    font-size: 2.0em;
-    font-weight: bolder;
-  }
-  .logo {
-    width: 90px;
-    height: 110px;
-  }
-  .number {
-    font-family: sans-serif;
-    font-size: 2.0em;
-    line-height: 1.2em;      
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #c5e2e6;
+}
+.header-block {
+  position: relative;
+  padding: 15px;
+}
+.title-holder {
+    padding: 10px;
+    float: left;
+}
+.subtitle {
+  font-family: sans-serif;
+  font-size: 1.0em;
+}
+.name-company {
+  font-family: sans-serif;
+  font-size: 2.0em;
+  font-weight: bolder;
+}
+.logo {
+  width: 90px;
+  height: 110px;
+}
+.number {
+  font-family: sans-serif;
+  font-size: 2.0em;
+  line-height: 1.2em;      
 }
 .feedback {
-    margin-top: 20px;
-    font-family: sans-serif;
-    font-size: 1.5em;
-    font-weight: bolder;
-    border-bottom: 2px dashed #272727;
-    float: right;
+  margin-top: 20px;
+  font-family: sans-serif;
+  font-size: 1.5em;
+  font-weight: bolder;
+  border-bottom: 2px dashed #272727;
+  float: right;
 }

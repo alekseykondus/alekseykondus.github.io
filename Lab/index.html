@@ -4,12 +4,16 @@
         <link rel="stylesheet" href="header.css">
         <link rel="stylesheet" href="menu.css">
         <link rel="stylesheet" href="slider.css">
+        <link rel="stylesheet" href="context.css">
     </head>
     <style>
         * {
             box-sizing: border-box;
         }
         body{
+            font-family: 'PT Sans', sans-serif;
+            font-size: 14px;
+            line-height: 22px;
             margin: 0px;
             z-index: -1;
             background: url(images/background.jpg) 100% 100% no-repeat;
@@ -17,92 +21,37 @@
             background-size: 100%;
         }
 
-        .content {
+        .footer {
             position: relative;
-            display: inline-block;
-            width: 70%;
-            margin-left: 15%;
-            background-color: blanchedalmond;
-        }
-        .path-section {
-            padding: 7px;
-        }
-        .text-path-section {
-            font-family: sans-serif;
-            text-decoration: none;
-            font-size: 0.9em;
-            color: #000;
-        }
-        .text-path-section:hover {
-            color: cadetblue;
-        }
-        .side-container {
-            width: 20%;
-            background-color: chartreuse;
-            float: left;
-        }
-        .categories-container {
-            list-style-type: none;
-            height: 300px;
-            overflow: hidden;
-        }
-        .inside-categories {
-            list-style-type: square;
-            list-style-position: inside;
-            font-size: 1.0em;
-        }
-
-
-        .products-container {
+            width: 100%;
             display: flex;
             flex-wrap: wrap;
-            width: 80%;
-            height: auto;
-            float: left;
+            justify-content:space-between;
+            background-color: #272727;
+            color:white;
         }
-        .product {
-            margin: 10px;
-            background: linear-gradient(to top, #abf5e0, #de2ff5);
-            background-color: khaki;
-            border: 3px solid khaki;
-            border-radius: 10px;
-            width: 250px;
-            height: 300px;
-            text-align: center;
+        .footer-info {
+            margin: 20px;
+            margin-left: 150px;
+            font-size: 14px;
         }
-        .product-name {
-            font-family: sans-serif;
+        .footer-menu {
+            margin: 20px;
+        }
+        .footer-menu ul li {
             position: relative;
-            font-size: 1.6em;
-            font-weight: bolder;
-            color: blueviolet;
-        }
-        .product-img {
-            margin: auto;
-            margin-top: 10px;
-            width: 200px;
-            height: 100px;
-            background-repeat: no-repeat;
-            background-size: 100%;
-        }
-        .product-price {
+            padding: 15px 0px;
             font-family: sans-serif;
-            font-size: 1.6em;
-            font-weight: bolder;
-            color:red;
+            font-size: 14px;
+            display: list-item;
+            padding: 0px;
+
         }
-        .product-description {
-            width: 250px;
-            height: 80px;
-            padding: 10px;
-            position: relative;
-            font-family: sans-serif;
-            font-size: 1.0em;
+        .sources {
+            margin: 20px;
+            margin-right: 150px;
         }
-        .product-img1 { background-image: url(images/Lamborghini_Sian.jpg); }
-        .product-img2 { background-image: url(images/Tesla_Roadster.jpg); }
-        .product-img3 { background-image: url(images/Renault_Alpine.jpg); }
-        .product-img4 { background-image: url(images/Chevrolet_Corvette.jpg); }
+
         </style>
     
     <body>
@@ -158,50 +107,20 @@
             <div class="slider">    
               <div class="img img1">
                 <div class="frag"></div>
-                <div class="frag"></div>
-                <div class="frag"></div>
-                <div class="frag"></div>
-                <div class="frag"></div>
-                <div class="frag"></div>
               </div>
               <div class="img img2">
-                <div class="frag"></div>
-                <div class="frag"></div>
-                <div class="frag"></div>
-                <div class="frag"></div>
-                <div class="frag"></div>
                 <div class="frag"></div>
               </div>
               <div class="img img3">
                 <div class="frag"></div>
-                <div class="frag"></div>
-                <div class="frag"></div>
-                <div class="frag"></div>
-                <div class="frag"></div>
-                <div class="frag"></div>
               </div>
               <div class="img img4">
-                <div class="frag"></div>
-                <div class="frag"></div>
-                <div class="frag"></div>
-                <div class="frag"></div>
-                <div class="frag"></div>
                 <div class="frag"></div>
               </div>
               <div class="img img5">
                 <div class="frag"></div>
-                <div class="frag"></div>
-                <div class="frag"></div>
-                <div class="frag"></div>
-                <div class="frag"></div>
-                <div class="frag"></div>
               </div>
               <div class="img img6">
-                <div class="frag"></div>
-                <div class="frag"></div>
-                <div class="frag"></div>
-                <div class="frag"></div>
-                <div class="frag"></div>
                 <div class="frag"></div>
               </div>
             </div>
@@ -243,43 +162,153 @@
                 </ul>
             </div>
 
-            <div class="products-container">
-                <div class="product">
-                    <div class="product-img product-img1"></div>
-                    <div class="product-name">Lamborghini<br>Sian</div>
-                    <div class="product-description">
-                        Cамый мощным суперкар за всю историю марки       
+            <input type="radio" name="products-container" id="container1" checked>
+            <input type="radio" name="products-container" id="container2">
+            <input type="radio" name="products-container" id="container3">
+            <input type="radio" name="products-container" id="container4">
+            <input type="radio" name="products-container" id="container5">
+
+            <div class="main-products-container">    
+                <div class="products-container products-container1">
+                    <div class="product-frag">
+                    <div class="product">
+                        <div class="product-img product-img1"></div>
+                        <div class="product-name">Lamborghini<br>Sian</div>
+                        <div class="product-description">
+                            Cамый мощный суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">100 000 $</div>
                     </div>
-                    <div class="product-price">100 000 $</div>
-                </div>
-                <div class="product">
-                    <div class="product-img product-img2"></div>
-                    <div class="product-name">Tesla<br>Roadster</div>
-                    <div class="product-description">
-                        Cамый мощным суперкар за всю историю марки       
+                    <div class="product">
+                        <div class="product-img product-img2"></div>
+                        <div class="product-name">Tesla<br>Roadster</div>
+                        <div class="product-description">
+                            Cамый мощный суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">100 000 $</div>
                     </div>
-                    <div class="product-price">100 000 $</div>
-                </div>
-                <div class="product">
-                    <div class="product-img product-img3"></div>
-                    <div class="product-name">Renault<br>Alpine</div>
-                    <div class="product-description">
-                        Cамый мощным суперкар за всю историю марки       
+                    <div class="product">
+                        <div class="product-img product-img3"></div>
+                        <div class="product-name">Renault<br>Alpine</div>
+                        <div class="product-description">
+                            Cамый мощный суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">100 000 $</div>
                     </div>
-                    <div class="product-price">100 000 $</div>
-                </div>
-                <div class="product">
-                    <div class="product-img product-img4"></div>
-                    <div class="product-name">Chevrolet<br>Corvette</div>
-                    <div class="product-description">
-                        Cамый мощным суперкар за всю историю марки       
+                    <div class="product">
+                        <div class="product-img product-img4"></div>
+                        <div class="product-name">Chevrolet<br>Corvette</div>
+                        <div class="product-description">
+                            Cамый мощный суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">100 000 $</div>
                     </div>
-                    <div class="product-price">100 000 $</div>
+                    <div class="product">
+                        <div class="product-img product-img5"></div>
+                        <div class="product-name">TVR<br>Griffith</div>
+                        <div class="product-description">
+                            Cамый мощный суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">100 000 $</div>
+                    </div>
+                    <div class="product">
+                        <div class="product-img product-img6"></div>
+                        <div class="product-name">Mercedes-AMG<br>GT</div>
+                        <div class="product-description">
+                            Cамый мощный суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">100 000 $</div>
+                    </div>
                 </div>
-                <div class="product">4</div>
-                <div class="product">5</div>
+                </div>
+                <div class="products-container products-container2">
+                    <div class="product-frag">
+                        <div class="product">
+                        <div class="product-img product-img7"></div>
+                        <div class="product-name">Honda<br>NSX</div>
+                        <div class="product-description">
+                            Cамый мощный суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">100 000 $</div>
+                        </div>
+                        <div class="product">
+                        <div class="product-img product-img8"></div>
+                        <div class="product-name">Subaru<br>BRZ</div>
+                        <div class="product-description">
+                            Cамый мощный суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">100 000 $</div>
+                        </div>
+                        <div class="product">
+                        <div class="product-img product-img9"></div>
+                        <div class="product-name">Audi<br>e-tron GT</div>
+                        <div class="product-description">
+                            Cамый мощным суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">100 000 $</div>
+                        </div>
+                        <div class="product">
+                        <div class="product-img product-img10"></div>
+                        <div class="product-name">KIA<br>Stinger</div>
+                        <div class="product-description">
+                            Cамый мощным суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">100 000 $</div>
+                        </div>
+                        <div class="product">
+                        <div class="product-img product-img11"></div>
+                        <div class="product-name">BMW<br>M4</div>
+                        <div class="product-description">
+                            Cамый мощным суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">100 000 $</div>
+                        </div>
+                        <div class="product">
+                        <div class="product-img product-img12"></div>
+                        <div class="product-name">Bentley<br>Bentayga</div>
+                        <div class="product-description">
+                            Cамый мощным суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">100 000 $</div>
+                        </div>
+                    </div>
+                </div>
+              <div class="controls-product">
+                  <label for="container1">1</label>
+                  <label for="container2">2</label>
+                  <label for="container3">3</label>
+                  <label for="container4">4</label>
+              </div>
             </div>
+  
         </div>
 
+        <div class="footer">
+            <div class="footer-info">
+                2021 Deluxe Auto<br>DeluxeAuto@gmail.com
+            </div>
+            <div class="footer-menu">
+                <ul>
+                    <li>
+                        <a href="#" class="menu-text">Главная</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-text">Каталог</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-text">Доставка и оплата</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-text">Прайс лист</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-text">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sources">
+                2021 Deluxe Auto<br>DeluxeAuto@gmail.com
+            </div>
+        </div>
     </body>
 </html>
