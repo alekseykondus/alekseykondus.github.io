@@ -4,11 +4,11 @@
     text-align: center;
     width: 100%;
 }
-ul {
+.menu ul {
     list-style-type: none;
     margin: 0px;
 }
-li {
+.menu li {
     display: inline-block;
     position: relative;
     box-sizing: content-box;

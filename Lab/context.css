@@ -16,7 +16,7 @@
         .path-section {
             grid-column: 1 / 5;
             grid-row: 1;
-            padding: 7px;
+            padding: 10px;
         }
         .text-path-section {
             font-family: sans-serif;
@@ -32,25 +32,40 @@
             grid-row: auto;
             float: left;
         }
-        .side-container-ul li {
-            list-style-position: outside;
-            font-family: 'PT Sans', sans-serif;
-            font-size: 14px;
-            line-height: 22px;
-        }
-
 
         .categories-container {
-            list-style-type: none;
-            height: 300px;
-            overflow: hidden;
+            list-style: none;
+            font-family: 'PT Sans', sans-serif;
+            font-size: 18px;
         }
+        .categories-container-item, .controls-product-item {
+            text-decoration: none;
+            color: #000;
+        }
+        .categories-container li {
+            margin-bottom: 1em;
+           }
         .inside-categories {
-            list-style-type: square;
-            list-style-position: inside;
-            font-size: 1.0em;
+            padding:0;
+            font-size: 14px;
+            list-style: none;
         }
-
+        .inside-categories li{
+            margin-bottom: 0em;
+            padding:4px;
+            padding-left:10px;
+        }
+        .inside-categories li:before {
+            padding-right:10px;
+            font-weight: bold;
+            color: #77AEDB;
+            content: "\2606";
+            transition-duration: 0.5s;
+        }
+        .inside-categories li:hover:before {
+            color: #337AB7;
+            content: "\2605";
+        }
         .main-products-container {
             grid-column: 2 / 6;
             grid-row: auto;
