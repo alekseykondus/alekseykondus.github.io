@@ -4,13 +4,18 @@
         }
 
         .content {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            grid-auto-rows: minmax(auto, auto);
             position: relative;
             width: 70%;
-            min-height: 100%;
             margin-left: 15%;
             background-color: blanchedalmond;
         }
         .path-section {
+            grid-column: 1 / 5;
+            grid-row: 1;
             padding: 7px;
         }
         .text-path-section {
@@ -23,10 +28,18 @@
             color: cadetblue;
         }
         .side-container {
-            width: 20%;
-            background-color: chartreuse;
+            grid-column: 1;
+            grid-row: auto;
             float: left;
         }
+        .side-container-ul li {
+            list-style-position: outside;
+            font-family: 'PT Sans', sans-serif;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+
         .categories-container {
             list-style-type: none;
             height: 300px;
@@ -38,17 +51,17 @@
             font-size: 1.0em;
         }
 
-
         .main-products-container {
-            position: relative;
-            width: 80%;
-            float: left;
+            grid-column: 2 / 6;
+            grid-row: auto;
         }
         .products-container {
-            position: absolute;
             width: 100%;
-            height: 100%;
+            height: auto;
             float: left;
+        }
+        .products-container2 {
+            margin-top: -640px;
         }
         .product {
             margin: 10px;
@@ -59,6 +72,38 @@
             width: 250px;
             height: 300px;
             text-align: center;
+        }
+        @media screen and (max-width: 1012px) {
+            .products-container2 {
+                margin-top: -1920px;
+            }
+            .controls-product {
+                margin-top: 2020px;
+            }            
+        }
+        @media (min-width: 1013px) and (max-width: 1300px) {
+            .products-container2 {
+                margin-top: -960px;
+            }
+            .controls-product {
+                margin-top: 1120px;
+            }            
+            .product {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+        @media (min-width: 1300px) and (max-width: 1470px) {
+            .products-container2 {
+                margin-top: -960px;
+            }
+            .controls-product {
+                margin-top: 1120px;
+            }            
+            .product {
+                margin-left: 50px;
+                margin-right: 50px;
+            }
         }
         .product-name {
             font-family: sans-serif;
@@ -82,7 +127,7 @@
             color:red;
         }
         .product-description {
-            width: 250px;
+            width: 100%;
             height: 80px;
             padding: 10px;
             position: relative;
@@ -103,9 +148,10 @@
         .product-img12 { background-image: url(images/Bentley_Bentayga.jpg); }
 
         .product-frag {
-            position: absolute;
+            position: relative;
             display: flex;
             flex-wrap: wrap;
+            justify-content:space-between;
             width: 100%;
             height: auto;
             float: left;
@@ -122,12 +168,12 @@
 }
 .controls-product {
     position: relative;
-    margin-top: 80%;
+    margin-top: 670px;
     top: -30px;
     width: 100px;
     left: 50%;
+    margin-left: -50px;
     z-index: 2;
-    margin-left: -90px;
 }
 .controls-product label {
     display: block;
@@ -147,4 +193,24 @@
     opacity: 1.0;
     font-size: 2.0em;
     color:blue;
+}
+
+
+.center-section-bottom-text {
+    width: 100%;
+    column-count: 2;
+    column-gap: 60px;
+    text-align: justify;
+    margin-top: 60px;
+    padding: 30px;
+    border-top: 1px solid#272727;
+    color: #272727;
+}
+
+.subcategories-list {
+    list-style-type: square;
+    list-style-position: inside;
+    padding: 3px 0;
+    margin-left: 20px;
+    width: auto;
 }
