@@ -166,7 +166,7 @@
     background-color: white;
     cursor: pointer;
     opacity: 0.3;
-    transition: opacity 0.5s;;
+    transition: opacity 0.5s;
 }
 .controls label:hover,
 .side-controls label:hover,
