@@ -88,7 +88,7 @@
             height: 300px;
             text-align: center;
         }
-        @media screen and (max-width: 1012px) {
+        @media (max-width: 1012px) {
             .products-container2 {
                 margin-top: -1920px;
             }
@@ -166,7 +166,7 @@
             position: relative;
             display: flex;
             flex-wrap: wrap;
-            justify-content:space-between;
+            justify-content: center;
             width: 100%;
             height: auto;
             float: left;
