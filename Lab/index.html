@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="slider.css">
         <link rel="stylesheet" href="context.css">
         <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="feedback.css">
     </head>
     <style>
         * {
@@ -19,87 +20,6 @@
             background: url(images/background.jpg) 100% 100%;
             background-attachment: fixed;
             background-size: 100%;
-        }
-
-        body > input {
-            display: none;
-        }
-
-        .feedback {
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items:center;
-        }
-
-        .feedback-background {
-            position: absolute;
-            left: 0px;
-            z-index: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.4;
-            background-color: gray;
-            background-size: 100%;
-
-        }
-        .feedback-item {
-            margin-top: 5%;
-            width: 450px; 
-            height: 600px; 
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 7px 20px rgb(0, 0,0, 0.5);
-            z-index: 1;
-        }
-        .feedback-close {
-            display: flex;
-            justify-content:flex-end;
-        }
-        .feedback-close-item {
-            width: 30px; 
-            height: 30px; 
-            background-color: white; 
-            opacity: 1;
-            border-radius: 5px;
-        }
-        .close {
-            position: relative;
-            width: 30px;
-            height: 30px;
-            opacity: 0.4;
-        }
-        .close:hover {
-            opacity: 1;
-        }
-        .close:before, .close:after {
-            position: absolute;
-            left: 15px;
-            content: ' ';
-            height: 30px;   
-            width: 2px;
-            background-color: #000;
-        }
-        .close:before {
-            transform: rotate(45deg);
-        }
-        .close:after {
-            transform: rotate(-45deg);
-        }
-        #feedback1:checked ~ .feedback {
-            z-index: 3;
-            transition: opacity 1s;
-        }
-        #feedback2:checked ~ .feedback {
-            opacity: 0;
-            z-index: -1;
-            transition: opacity 1s;
         }
         </style>
     
@@ -115,8 +35,8 @@
                 </div>
             </div>
             <div class="header-block">
-                <span class="number">+7(499) 777-77-77</span><br>
-                <span class="number">+7(499) 777-77-77</span><br>
+                <span class="number">+38(066) 777-77-77</span><br>
+                <span class="number">+38(063) 777-77-77</span><br>
                 <span class="feedback-text">
                     <label for="feedback1">Обратная связь</label>
                 </span>
@@ -379,7 +299,28 @@
                         </div>
                     </div>
                 </label>
-                <label for="feedback3"></label>
+                <form class="form">
+                    <div class="feetback-name">ОБРАТНАЯ СВЯЗЬ</div>
+
+                <div class="form_grup">
+                    <input class="form_input" placeholder=" " required>
+                    <label class="form_label">Ваше имя*</label>
+                  </div>
+                  <div class="form_grup">
+                    <input class="form_input" placeholder=" " required>
+                    <label class="form_label">Телефон*</label>
+                  </div>
+                  <div class="form_grup">
+                    <input class="form_input" placeholder=" " required>
+                    <label class="form_label">Email*</label>
+                  </div>
+                  <div class="form_grup grup-text">
+                    <textarea class="form_input-text" placeholder=" "></textarea>
+                    <label class="form_label">Сообщение</label>
+                  </div>
+                  <label for="feedback3">
+                    <button class="form_button">ОТПРАВИТЬ</button></label>
+                </form>
             </div>
 
         </div>

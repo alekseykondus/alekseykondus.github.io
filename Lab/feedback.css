@@ -1,0 +1,172 @@
+body > input {
+    display: none;
+}
+
+.feedback {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+}
+
+.feedback-background {
+    position: absolute;
+    left: 0px;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-color: gray;
+    background-size: 100%;
+}
+.feedback-item {
+    margin-top: 5%;
+    width: 450px; 
+    height: 600px; 
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 7px 20px rgb(0, 0,0, 0.5);
+    z-index: 1;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px #ccc;
+}
+.form {
+    padding: 32px; 
+    padding-top: 10px;
+    font-family: sans-serif;
+    letter-spacing: 1px;           
+    display: flex;
+    column-count: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.feetback-name {
+    text-align: center;
+    font-size: 2.0em;
+    font-weight: bolder;
+    margin-bottom: 40px;
+}
+.form_button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-size: 16xp;
+    color: white  ;
+    background-color:#01153e;
+    outline: none; 
+    cursor: pointer;
+    transition: 0.3s;
+}
+.form_grup {
+ position: relative;
+ margin-bottom: 32px;
+ width: 100%;
+}        
+.grup-text {
+ height: 30vh;
+}
+
+.form_input {
+ width: 100%;
+ padding: 0 0 10px 0;
+ border: none;
+ border-bottom: 1px solid #e0e0e0;
+ background-color: transparent; 
+ outline: none;
+ transition: 0.3s;
+}
+.form_input-text {
+ width: 100%;
+ height: 100%;
+ padding: 0 0 10px 0;
+ border: 1px solid #e0e0e0;
+ background-color: transparent; 
+ outline: none;
+ transition: 0.3s;
+}
+.form_label {
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: -1;
+ color: #9e9e9e;
+ transition: 0.3s;
+}
+.form_button:focus,
+.form_button:hover{
+    background-color: rgba(0, 113, 240, 0.7);
+}
+.form_input:focus {
+    border-bottom: 1px solid #1a73a8;
+}
+.form_input-text:focus {
+    border-bottom: 1px solid #1a73a8;
+}
+.form_input:focus ~ .form_label,
+.form_input-text:focus ~ .form_label {
+    margin-top: -18px;
+    font-size:12px;
+    color: #e0e0e0;
+}
+.form_input:focus ~ .form_label,    
+.form_input:not(:placeholder-shown) ~ .form_label {
+    margin-top: -18px;
+    font-size:12px;
+    color: #e0e0e0;
+}
+.feedback-close {
+    display: flex;
+    justify-content:flex-end;
+}
+.feedback-close-item {
+    width: 30px; 
+    height: 30px; 
+    background-color: white; 
+    opacity: 1;
+    border-radius: 5px;
+}
+.close {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    opacity: 0.4;
+}
+.close:hover {
+    opacity: 1;
+}
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 30px;   
+    width: 2px;
+    background-color: #000;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
+}
+#feedback1:checked ~ .feedback {
+    z-index: 3;
+    transition: opacity 1s;
+}
+#feedback2:checked ~ .feedback {
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 1s;
+}
+#feedback3:checked ~ .feedback {
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 1s;
+}

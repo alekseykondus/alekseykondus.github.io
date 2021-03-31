@@ -108,7 +108,6 @@
 }
 .img {
     position: absolute;
-    /*выравнивание */
 }
 .img1 .frag { background-image: url(images/Renault_Alpine.jpg);
     background-repeat: no-repeat;
