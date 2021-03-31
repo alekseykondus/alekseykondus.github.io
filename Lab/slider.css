@@ -266,7 +266,7 @@
     75% { opacity: 0; }
     80% { opacity: 0; }
     95% { opacity: 0; }
- }
+}
  @keyframes  slide5  {
     5% { opacity: 0; }
     15% { opacity: 0; }
@@ -280,7 +280,7 @@
     75% { opacity: 1; }
     80% { opacity: 0; }
     95% { opacity: 0; }
- }
+}
  @keyframes  slide6  {
     5% { opacity: 0; }
     15% { opacity: 0; }
@@ -294,7 +294,7 @@
     75% { opacity: 0; }
     80% { opacity: 1; }
     95% { opacity: 1; }
- }
+}
 
 .img1 { 
     animation: slide1 25s infinite; 

@@ -21,25 +21,12 @@
             background-attachment: fixed;
             background-size: 100%;
         }
-        .price {
-        margin: 20px;
-        margin-top: 50px;
-        width: 100%;
-        text-align: center;
-        }
-        .price > a{
-            text-decoration: none;
-            font-size: 1.8em;
-            font-family: sans-serif;
-            font-weight: bolder;
-            color: black;
-        }
-        .price>a:hover {
-            font-size: 2.0em;
-            text-shadow: gray 0 0 5px;
+        .contacts {
+            width: 100%;
+            line-height: 22px;
+
         }
         </style>
-    
     <body>
         <div class="header">
             <div class="header-block">
@@ -62,11 +49,11 @@
         <div class="menu">
             <ul>
                 <li>
-                    <a href="#" class="menu-text">ГЛАВНАЯ</a>
+                    <a href="index.html" class="menu-text">ГЛАВНАЯ</a>
                     <span class="bar-between-menu-items">|</span>
                 </li>
                 <li>
-                    <a href="#contents" class="menu-text">КАТАЛОГ</a>
+                    <a href="index.html" class="menu-text">КАТАЛОГ</a>
                     <span class="bar-between-menu-items">|</span>
                 </li>
                 <li>
@@ -132,7 +119,7 @@
 
         <div class="content" id="contents">
             <div class="path-section">
-                <a href="#" class="text-path-section">Главная</a> / 
+                <a href="index.html" class="text-path-section">Главная</a> / 
                 <a href="#" class="text-path-section">Каталог</a> / 
                 <a href="#" class="text-path-section">Автомобили</a>
             </div>
@@ -145,132 +132,25 @@
                         </ul>
                     </li>
                     <li><a href="#" class="categories-container-item">АКСЕССУАРЫ</a> </li>
-                    <li><a href="contacts.html" class="categories-container-item">ДРУГОЕ</a> </li>
+                    <li><a href="#" class="categories-container-item">ДРУГОЕ</a> </li>
                 </ul>
-                    <div class="price">
-                        <a href="doc/PriceList.xlsx"  download>
-                        <img src="images/excel-logo.svg" alt="excel-logo" width="150px">
-                        Прайс-лист
-                        </a>
-                    </div>
             </div>
 
-            <input type="radio" name="products-container" id="container1" checked>
-            <input type="radio" name="products-container" id="container2">
-            <input type="radio" name="products-container" id="container3">
-            <input type="radio" name="products-container" id="container4">
-            <input type="radio" name="products-container" id="container5">
 
             <div class="main-products-container" id="main-products-container">    
-                <div class="products-container products-container1">
-                    <div class="product-frag">
-                    <div class="product">
-                        <div class="product-img product-img1"></div>
-                        <div class="product-name">LAMBORGHINI SIAN</div>
-                        <div class="product-description">
-                            cамый мощный суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">100 000 $</div>
-                    </div>
-                    <div class="product ">
-                        <div class="product-img product-img2"></div>
-                        <div class="product-name">TESLA ROADSTER</div>
-                        <div class="product-description">
-                            Cамый мощный суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">100 000 $</div>
-                    </div>
-                    <div class="product ">
-                        <div class="product-img product-img3"></div>
-                        <div class="product-name">RENAULT ALPHINE</div>
-                        <div class="product-description">
-                            Cамый мощный суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">100 000 $</div>
-                    </div>
-                    <div class="product ">
-                        <div class="product-img product-img4"></div>
-                        <div class="product-name">CHEVROLET CORVETTE</div>
-                        <div class="product-description">
-                            Cамый мощный суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">100 000 $</div>
-                    </div>
-                    <div class="product ">
-                        <div class="product-img product-img5"></div>
-                        <div class="product-name">MERCEDES AMG ONE</div>
-                        <div class="product-description">
-                            Cамый мощный суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">100 000 $</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-img product-img6"></div>
-                        <div class="product-name">BUGATTI DIVO</div>
-                        <div class="product-description">
-                            Cамый мощный суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">100 000 $</div>
-                    </div>
-                </div>
-                </div>
-                <div class="products-container products-container2">
-                    <div class="product-frag">
-                        <div class="product">
-                        <div class="product-img product-img7"></div>
-                        <div class="product-name">HONDA NSX</div>
-                        <div class="product-description">
-                            Cамый мощный суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">100 000 $</div>
-                        </div>
-                        <div class="product">
-                        <div class="product-img product-img8"></div>
-                        <div class="product-name">SUBARU BRZ</div>
-                        <div class="product-description">
-                            Cамый мощный суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">100 000 $</div>
-                        </div>
-                        <div class="product">
-                        <div class="product-img product-img9"></div>
-                        <div class="product-name">AUDIi E-TRON GT</div>
-                        <div class="product-description">
-                            Cамый мощным суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">100 000 $</div>
-                        </div>
-                        <div class="product">
-                        <div class="product-img product-img10"></div>
-                        <div class="product-name">KIA STINGER</div>
-                        <div class="product-description">
-                            Cамый мощным суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">100 000 $</div>
-                        </div>
-                        <div class="product">
-                        <div class="product-img product-img11"></div>
-                        <div class="product-name">BMW M4</div>
-                        <div class="product-description">
-                            Cамый мощным суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">100 000 $</div>
-                        </div>
-                        <div class="product">
-                        <div class="product-img product-img12"></div>
-                        <div class="product-name">BENTLEY BENTAYGA</div>
-                        <div class="product-description">
-                            Cамый мощным суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">100 000 $</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="controls-product">
-                  <label for="container1">1</label>
-                  <label for="container2">2</label>
-                  <label for="container3">3</label>
-                  <label for="container4">4</label>
+                <div class="contacts">
+                    <h1>КОНТАКТЫ</h1>
+                    Вы можете связаться с нами по указанным номерам телефонов:
+                    <ul>
+                        <li>+38(066) 777-77-77</li>
+                        <li>+38(063) 777-77-77</li>
+                    </ul>
+                    Колл-центр Deluxe Auto открыт ежедневно с 08:00 до 21:00.<br><br>
+                    Напишите нам по электронной почте:
+                    <h1>DeluxeAuto@gmail.com</h1>
+                    или воспользуйтесь <span class="menu-text" style="color: black;"><label for="feedback1">формой обратной связи</label></span>.<br><br>
+                    Наши менеджеры ответят на все ваши вопросы и помогут решить любую проблему. 
+
                 </div>
                 <div class="center-section-bottom-text">
                 Компания «Пиксель Плюс» существует более 6 лет, за это время мы принимали участие в разработке более чем 700 сайтов, поэтому можем уверенно называть себя профессионалами. На данный момент наш коллектив состоит из более чем 30 сотрудников работающих в двух офисах в Москве и Зеленограде.Одним из основных направлений работ нашей компании является поисковое продвижение сайтов, на данной момент мы работаем с более чем 150 постоянными клиентами по более чем 11 000 поисковым запросам. При этом в работе основной акцент мы делаем на качестве работ, а так же применяем собственные уникальные разработки в области SEO продвижения. На данный момент отдел SEO состоит из 9 человек под руководством ведущего специалиста, преимущественно работающих в нашем московском офисе.
@@ -286,10 +166,10 @@
             <div class="footer-menu">
                 <ul>
                     <li>
-                        <a href="#" class="menu-text">Главная</a>
+                        <a href="index.html" class="menu-text">Главная</a>
                     </li>
                     <li>
-                        <a href="#" class="menu-text">Каталог</a>
+                        <a href="index.html" class="menu-text">Каталог</a>
                     </li>
                     <li>
                         <a href="#" class="menu-text">Доставка и оплата</a>
