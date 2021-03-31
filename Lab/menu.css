@@ -1,11 +1,12 @@
 .menu {
-    background-color: #1133ba;
+    background-color: black;
     text-align: center;
     width: 100%;
 }
 .menu ul {
     list-style-type: none;
     margin: 0px;
+    margin-left: -35px;
 }
 .menu li {
     display: inline-block;
@@ -25,8 +26,10 @@
 .menu-text {
     color: white;
     text-decoration: none;
+    letter-spacing: 3px;
 }
 
 .menu-text:hover {
-    color: aqua;
+    font-weight:bolder;
+    text-shadow: #5dc8e5 0 0 10px;
 }

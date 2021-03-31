@@ -110,16 +110,16 @@
     position: absolute;
     /*выравнивание */
 }
-.img1 .frag { background-image: url(images/img1.png);
+.img1 .frag { background-image: url(images/Renault_Alpine.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
 
 }    
-.img2 .frag { background-image: url(images/img2.jpg); 
+.img2 .frag { background-image: url(images/Chevrolet_Corvette.jpg); 
     background-repeat: no-repeat;
     background-size: 100%;
 }
-.img3 .frag { background-image: url(images/img3.jpeg); 
+.img3 .frag { background-image: url(images/Subaru_BRZ.jpg); 
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -127,7 +127,7 @@
     background-repeat: no-repeat;
     background-size: 100%;
 }
-.img5 .frag { background-image: url(images/img5.jpg); 
+.img5 .frag { background-image: url(images/Lamborghini_Sian2.jpg); 
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -199,7 +199,7 @@
 #slide6:checked ~ .side-controls label:nth-of-type(5) {
     margin-left: -15px;
     border: 30px solid transparent; 
-    border-right: 30px solid green;
+    border-right: 30px solid white;
 }
 #slide1:checked ~ .side-controls label:nth-of-type(2),
 #slide2:checked ~ .side-controls label:nth-of-type(3),
@@ -209,6 +209,6 @@
 #slide6:checked ~ .side-controls label:nth-of-type(1) {
     margin-left: 95%;
     border: 30px solid transparent; 
-    border-left: 30px solid green;
+    border-left: 30px solid white;
 }
 
