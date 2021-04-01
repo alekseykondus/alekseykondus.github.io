@@ -11,6 +11,7 @@
             width: 70%;
             margin-left: 15%;
             background-color: white;
+            margin-bottom: 150px;
         }
         .path-section {
             grid-column: 1 / 5;
