@@ -186,7 +186,8 @@
     top: -10px;
     width: 100px;
     left: 50%;
-    margin-left: -50px;
+    margin-left: -20px;
+    margin-bottom: 80px;
     z-index: 2;
 }
 .controls-product label {

@@ -22,6 +22,23 @@
             background-attachment: fixed;
             background-size: 100%;
         }
+        .table-container {
+            padding: 20px;
+        }
+        TABLE {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        TD, TH {
+            padding: 3px;
+            border: 1px solid #01153e;
+        }
+        TH {
+            background: #b0e0e6;
+        }
+        .first-tr {
+            text-align: center;
+        }
         </style>
     
     <body>
@@ -50,7 +67,7 @@
                     <span class="bar-between-menu-items">|</span>
                 </li>
                 <li>
-                    <a href="#contents" class="menu-text">КАТАЛОГ</a>
+                    <a href="index.html#contents" class="menu-text">КАТАЛОГ</a>
                     <span class="bar-between-menu-items">|</span>
                 </li>
                 <li>
@@ -117,22 +134,21 @@
         <div class="content" id="contents">
             <div class="path-section">
                 <a href="index.html" class="text-path-section">Главная</a> / 
-                <a href="#contents" class="text-path-section">Каталог</a> / 
-                <a href="#contents" class="text-path-section">Автомобили</a>
+                <a href="#contents" class="text-path-section">Прайс-лист</a>
             </div>
             <div class="side-container">
                 <ul class="categories-container"> 
-                    <li><a href="#contents" class="categories-container-item"><u>АВТОМОБИЛИ</u></a>
+                    <li><a href="index.html#contents" class="categories-container-item"><u>АВТОМОБИЛИ</u></a>
                         <ul class="inside-categories">
-                            <li><a href="#contents" class="categories-container-item"><u>Спортивные</u></a></li>
-                            <li><a href="#" class="categories-container-item">Семейные</a></li>
+                            <li><a href="index.html#contents" class="categories-container-item"><u>Спортивные</u></a></li>
+                            <li><a href="index.html" class="categories-container-item">Семейные</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" class="categories-container-item">АКСЕССУАРЫ</a> </li>
+                    <li><a href="index.html" class="categories-container-item">АКСЕССУАРЫ</a> </li>
                     <li><a href="contacts.html" class="categories-container-item">ДРУГОЕ</a> </li>
                 </ul>
                     <div class="price">
-                        <a href="doc/PriceList.xlsx"  download>
+                        <a href="doc/PriceList.xlsx" download>
                         <img src="images/excel-logo.svg" alt="excel-logo" width="150px">
                         Прайс-лист
                         </a>
@@ -146,115 +162,23 @@
             <input type="radio" name="products-container" id="container5">
 
             <div class="main-products-container" id="main-products-container">    
-                <div class="products-container products-container1">
-                    <div class="product-frag">
-                    <div class="product">
-                        <div class="product-img product-img1"></div>
-                        <div class="product-name">LAMBORGHINI SIAN</div>
-                        <div class="product-description">
-                            cамый мощный суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">3 600 000 $</div>
-                    </div>
-                    <div class="product ">
-                        <div class="product-img product-img2"></div>
-                        <div class="product-name">TESLA ROADSTER</div>
-                        <div class="product-description">
-                            Cамый мощный суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">400 000 $</div>
-                    </div>
-                    <div class="product ">
-                        <div class="product-img product-img3"></div>
-                        <div class="product-name">RENAULT ALPHINE</div>
-                        <div class="product-description">
-                            Cамый мощный суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">270 000 $</div>
-                    </div>
-                    <div class="product ">
-                        <div class="product-img product-img4"></div>
-                        <div class="product-name">CHEVROLET CORVETTE</div>
-                        <div class="product-description">
-                            Cамый мощный суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">110 000 $</div>
-                    </div>
-                    <div class="product ">
-                        <div class="product-img product-img5"></div>
-                        <div class="product-name">MERCEDES AMG ONE</div>
-                        <div class="product-description">
-                            Cамый мощный суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">2 700 000 $</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-img product-img6"></div>
-                        <div class="product-name">BUGATTI DIVO</div>
-                        <div class="product-description">
-                            Cамый мощный суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">5 800 000 $</div>
-                    </div>
-                </div>
-                </div>
-                <div class="products-container products-container2">
-                    <div class="product-frag">
-                        <div class="product">
-                        <div class="product-img product-img7"></div>
-                        <div class="product-name">HONDA NSX</div>
-                        <div class="product-description">
-                            Cамый мощный суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">320 000 $</div>
-                        </div>
-                        <div class="product">
-                        <div class="product-img product-img8"></div>
-                        <div class="product-name">SUBARU BRZ</div>
-                        <div class="product-description">
-                            Cамый мощный суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">90 000 $</div>
-                        </div>
-                        <div class="product">
-                        <div class="product-img product-img9"></div>
-                        <div class="product-name">AUDIi E-TRON GT</div>
-                        <div class="product-description">
-                            Cамый мощным суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">205 000 $</div>
-                        </div>
-                        <div class="product">
-                        <div class="product-img product-img10"></div>
-                        <div class="product-name">KIA STINGER</div>
-                        <div class="product-description">
-                            Cамый мощным суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">95 000 $</div>
-                        </div>
-                        <div class="product">
-                        <div class="product-img product-img11"></div>
-                        <div class="product-name">BMW M4</div>
-                        <div class="product-description">
-                            Cамый мощным суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">280 000 $</div>
-                        </div>
-                        <div class="product">
-                        <div class="product-img product-img12"></div>
-                        <div class="product-name">BENTLEY BENTAYGA</div>
-                        <div class="product-description">
-                            Cамый мощным суперкар за всю историю марки       
-                        </div>
-                        <div class="product-price">710 000 $</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="controls-product">
-                  <label for="container1">1</label>
-                  <label for="container2">2</label>
-                  <label for="container3"></label>
-                  <label for="container4"></label>
+                <div class="table-container">
+                    <h1>ПРАЙС ЛИСТ</h1>
+                    <table>
+                        <tr class="first-tr"><td><b>Id</b></td><td><b>Название товара</b></td><td><b>Цена $</b></td></tr>
+                        <tr><td>1</td><td>LAMBORGHINI SIAN</td><td>3 600 000</td></tr>
+                        <tr><td>2</td><td>TESLA ROADSTER</td><td>400 000</td></tr>
+                        <tr><td>3</td><td>RENAULT ALPHINE</td><td>270 000</td></tr>
+                        <tr><td>4</td><td>CHEVROLET CORVETTE</td><td>110 000</td></tr>
+                        <tr><td>5</td><td>MERCEDES AMG ONE</td><td>2 700 000</td></tr>
+                        <tr><td>6</td><td>BUGATTI DIVO</td><td>5 800 000</td></tr>
+                        <tr><td>7</td><td>HONDA NSX</td><td>320 000</td></tr>
+                        <tr><td>8</td><td>SUBARU BRZ</td><td>90 000</td></tr>
+                        <tr><td>9</td><td>AUDIi E-TRON GT</td><td>205 000</td></tr>
+                        <tr><td>10</td><td>KIA STINGER</td><td>95 000</td></tr>
+                        <tr><td>11</td><td>BMW M4</td><td>280 000</td></tr>
+                        <tr><td>12</td><td>BENTLEY BENTAYGA</td><td>710 000</td></tr>
+                    </table>
                 </div>
                 <div class="center-section-bottom-text">
                     Компания Deluxe Auto, основанная в 2020, является абсолютным лидером на рынке продаж автомобилей класса люкс. Deluxe Auto представлены в более 20 странах мира на 4 континентах, в то время как главный офис находится в г. Киев, Украина. Это стало возможным благодаря сервису высочайшего класса, команде лучших профессионалов своего дела, а также заботе о наших клиентах даже после осуществления покупки. Ответственный подход и уникальное торговое предложение является нашим безоговорочным принципом.                </div>
@@ -272,13 +196,13 @@
                         <a href="index.html" class="menu-text">Главная</a>
                     </li>
                     <li>
-                        <a href="#contents" class="menu-text">Каталог</a>
+                        <a href="index.html#contents" class="menu-text">Каталог</a>
                     </li>
                     <li>
                         <a href="#" class="menu-text">Доставка и оплата</a>
                     </li>
                     <li>
-                        <a href="price-list.html" class="menu-text">Прайс лист</a>
+                        <a href="#contents" class="menu-text">Прайс лист</a>
                     </li>
                     <li>
                         <a href="contacts.html" class="menu-text">Контакты</a>

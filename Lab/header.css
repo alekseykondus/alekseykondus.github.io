@@ -28,13 +28,13 @@
   height: 110px;
 }
 .number {
-  font-family: sans-serif;
+  font-family: 'PT Sans', sans-serif;
   font-size: 1.6em;
   line-height: 1.2em;      
 }
 .feedback-text {
   margin-top: 20px;
-  font-family: sans-serif;
+  font-family: 'PT Sans', sans-serif;
   font-size: 1.5em;
   font-weight: bolder;
   border-bottom: 2px dashed white;
