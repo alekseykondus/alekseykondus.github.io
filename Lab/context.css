@@ -47,22 +47,14 @@
             padding:0;
             font-size: 14px;
             list-style: none;
+            margin-left: 30px;
         }
         .inside-categories li{
             margin-bottom: 0em;
             padding:4px;
-            padding-left:10px;
-        }
-        .inside-categories li:before {
+            padding-left:5px;
+            list-style-type:square;
             padding-right:10px;
-            font-weight: bold;
-            color: #77AEDB;
-            content: "\2606";
-            transition-duration: 0.5s;
-        }
-        .inside-categories li:hover:before {
-            color: #337AB7;
-            content: "\2605";
         }
         .main-products-container {
             grid-column: 2 / 6;
@@ -231,19 +223,17 @@
 }
 
 .price {
-    margin: 20px;
     margin-top: 50px;
     width: 100%;
-    text-align: center;
+    margin-left: 40px;
 }
 .price > a{
     text-decoration: none;
-    font-size: 1.8em;
-    font-family: sans-serif;
-    font-weight: bolder;
-    color: black;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+color: black;
 }
 .price>a:hover {
-    font-size: 2.0em;
+    font-size: 20px;
     text-shadow: gray 0 0 5px;
 }
