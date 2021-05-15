@@ -6,7 +6,15 @@ let carName = ["LAMBORGHINI SIAN", "TESLA ROADSTER", "RENAULT ALPHINE", "CHEVROL
 let carPrice = [3600000, 400000, 270000, 110000, 2700000, 5800000, 
                 320000, 90000, 205000, 95000, 280000, 710000];
 
+function clear () {
+     for (var element in cart) {
+          if (element == null)
+               delete element;
+     }
+     saveData();
+}
 document.onclick = (event) => {
+     clear();
      if (event.target.classList.contains('add-car')) {
           console.log(cart);
           if (cart == {})
@@ -75,7 +83,7 @@ function CreateElement (nameElement, idElement, innerText, parentId) {
 
 function isEmpty(obj) {
      for(var prop in obj) {
-         if(obj.hasOwnProperty(prop))
+         if(prop != null)
              return false;
      }
      return true;
