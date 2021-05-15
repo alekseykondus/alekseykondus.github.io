@@ -152,4 +152,4 @@ function saveData() {
  cart = JSON.parse(localStorage.getItem('cart')) || [];
  renderCart ();
  //console.log(localStorage.getItem('cart'));
- //console.log(JSON.parse(localStorage.getItem('cart')) || []);
+ console.log(JSON.parse(localStorage.getItem('cart')) || []);
