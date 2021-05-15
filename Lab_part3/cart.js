@@ -6,16 +6,7 @@ let carName = ["LAMBORGHINI SIAN", "TESLA ROADSTER", "RENAULT ALPHINE", "CHEVROL
 let carPrice = [3600000, 400000, 270000, 110000, 2700000, 5800000, 
                 320000, 90000, 205000, 95000, 280000, 710000];
 
-function clear () {
-     for (var element in cart) {
-          if (element == null)
-               delete element;
-     }
-     saveData();
-}
-
 document.onclick = (event) => {
-     clear();
      if (event.target.classList.contains('add-car')) {
           console.log(event.target.id);
           addCar(event.target.id, carName[event.target.id-1], "product-img"+event.target.id, carPrice[event.target.id-1]);
@@ -91,8 +82,8 @@ const calculateThePrice = () => {
      cart = JSON.parse(localStorage.getItem('cart')) || [];
      if (isEmpty(cart))
           return result;
-     for (var element in cart) {
-          if (element != null)
+     for (var element in cart ) {
+          if (cart[element] != null)
                result += cart[element]['count']*cart[element]["price"];
      }
      return result;
@@ -114,15 +105,17 @@ const renderCart = () => {
           CreateElement("div", "price", "Цена", "cart-header").classList.add("col-2", "text-center");
 
           for (element in cart) {
-               CreateElement("div", "car"+element, "", "cart-div").classList.add("row", "w-100", "ml-0", "py-2");
-               CreateElement("div", "carId"+element, element, "car"+element).classList.add("col-1", "text-center", "m-auto");
-               CreateElement("div", "carImg"+element, "", "car"+element).classList.add("col-3", "product-img", cart[element]["classImg"]);
-               CreateElement("div", "carName"+element, cart[element]["name"], "car"+element).classList.add("col-3", "h4", "text-center", "m-auto");
-               CreateElement("div", "carCount"+element, "", "car"+element).classList.add("col-3", "text-center", "m-auto");
-               CreateElement("button", element, "-", "carCount"+element).classList.add("btn", "btn-secondary", "d-inline", "minus");
-               CreateElement("div", "carCountNumber"+element, cart[element]["count"], "carCount"+element).classList.add("d-inline", "mx-2");
-               CreateElement("button", element, "+", "carCount"+element).classList.add("btn", "btn-secondary", "d-inline", "plus");
-               CreateElement("div", "carPrice"+element, cart[element]["price"]+" $", "car"+element).classList.add("col-2", "text-center", "m-auto");
+               if (cart[element] != null) {
+                    CreateElement("div", "car"+element, "", "cart-div").classList.add("row", "w-100", "ml-0", "py-2");
+                    CreateElement("div", "carId"+element, element, "car"+element).classList.add("col-1", "text-center", "m-auto");
+                    CreateElement("div", "carImg"+element, "", "car"+element).classList.add("col-3", "product-img", cart[element]["classImg"]);
+                    CreateElement("div", "carName"+element, cart[element]["name"], "car"+element).classList.add("col-3", "h4", "text-center", "m-auto");
+                    CreateElement("div", "carCount"+element, "", "car"+element).classList.add("col-3", "text-center", "m-auto");
+                    CreateElement("button", element, "-", "carCount"+element).classList.add("btn", "btn-secondary", "d-inline", "minus");
+                    CreateElement("div", "carCountNumber"+element, cart[element]["count"], "carCount"+element).classList.add("d-inline", "mx-2");
+                    CreateElement("button", element, "+", "carCount"+element).classList.add("btn", "btn-secondary", "d-inline", "plus");
+                    CreateElement("div", "carPrice"+element, cart[element]["price"]+" $", "car"+element).classList.add("col-2", "text-center", "m-auto");
+               }
           }
           CreateElement("div", "totalPrice", "Общая цена: "+price+" $", "cart-div").classList.add("row", "ml-0", "h3", "mt-3", "mx-auto");
           if (!price)
