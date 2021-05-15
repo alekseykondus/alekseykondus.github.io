@@ -13,12 +13,10 @@ function clear () {
      }
      saveData();
 }
+
 document.onclick = (event) => {
      clear();
      if (event.target.classList.contains('add-car')) {
-          console.log(cart);
-          if (cart == {})
-               clearData();
           console.log(event.target.id);
           addCar(event.target.id, carName[event.target.id-1], "product-img"+event.target.id, carPrice[event.target.id-1]);
      }
@@ -171,4 +169,3 @@ function saveData() {
  cart = JSON.parse(localStorage.getItem('cart')) || [];
  console.log(JSON.parse(localStorage.getItem('cart')) || []);
  renderCart ();
- //console.log(localStorage.getItem('cart'));
