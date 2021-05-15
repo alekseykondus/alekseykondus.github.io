@@ -70,10 +70,19 @@ function CreateElement (nameElement, idElement, innerText, parentId) {
      return element;
 }
 
+function isEmpty(obj) {
+     for(var prop in obj) {
+         if(obj.hasOwnProperty(prop))
+             return false;
+     }
+     return true;
+ }
 const calculateThePrice = () => {
      let result = 0;
      cart = JSON.parse(localStorage.getItem('cart')) || [];
-     if (cart.length == 0)
+     if (isEmpty(cart))
+          console.log("!cart");
+     else if (cart.length == 0)
           console.log("!cart");
      else if (!cart)
           console.log("!cart");
