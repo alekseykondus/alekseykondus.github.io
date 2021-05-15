@@ -83,9 +83,8 @@ const calculateThePrice = () => {
      if (isEmpty(cart))
           return result;
      for (var element in cart) {
-          console.log(cart);
-          console.log(element);
-          result += cart[element]['count']*cart[element]["price"];
+          if (element != null)
+               result += cart[element]['count']*cart[element]["price"];
      }
      return result;
 }
