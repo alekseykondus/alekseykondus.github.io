@@ -73,7 +73,9 @@ function CreateElement (nameElement, idElement, innerText, parentId) {
 const calculateThePrice = () => {
      let result = 0;
      cart = JSON.parse(localStorage.getItem('cart')) || [];
-     if (!cart)
+     if (cart.length == 0)
+          console.log("!cart");
+     else if (!cart)
           console.log("!cart");
      else if (cart == [])
           console.log("!cart");
