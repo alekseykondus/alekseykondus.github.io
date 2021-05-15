@@ -93,6 +93,7 @@ const calculateThePrice = () => {
           else 
           console.log("(((");
      for (element in cart) {
+          console.log(cart[element]);
           result += cart[element]['count']*cart[element]["price"];
      }
      return result;
