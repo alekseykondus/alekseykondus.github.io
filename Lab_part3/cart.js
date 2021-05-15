@@ -73,7 +73,7 @@ function CreateElement (nameElement, idElement, innerText, parentId) {
 const calculateThePrice = () => {
      let result = 0;
      cart = JSON.parse(localStorage.getItem('cart')) || [];
-     if (cart == [])
+     if (!cart)
           return result;
      for (element in cart) {
           result += cart[element]['count']*cart[element]["price"];
