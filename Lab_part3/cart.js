@@ -74,7 +74,11 @@ const calculateThePrice = () => {
      let result = 0;
      cart = JSON.parse(localStorage.getItem('cart')) || [];
      if (!cart)
-          return result;
+          console.log("!cart");
+     if (cart == [])
+          console.log("!cart");
+     if (cart == {})
+          console.log("!cart");
      for (element in cart) {
           result += cart[element]['count']*cart[element]["price"];
      }
