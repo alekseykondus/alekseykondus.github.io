@@ -8,6 +8,7 @@ let carPrice = [3600000, 400000, 270000, 110000, 2700000, 5800000,
 
 document.onclick = (event) => {
      if (event.target.classList.contains('add-car')) {
+          console.log(cart);
           if (cart == {})
                clearData();
           console.log(event.target.id);
