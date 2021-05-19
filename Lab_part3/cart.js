@@ -21,6 +21,7 @@ document.onclick = (event) => {
      if (event.target.classList.contains('add-car')) {
           console.log(event.target.id);
           addCar(event.target.id, carName[event.target.id-1], "product-img"+event.target.id, carPrice[event.target.id-1]);
+          alert("Товар добавлен в корзину!");
      }
      else if (event.target.classList.contains('plus')) {
           console.log(event.target.id);
@@ -36,8 +37,7 @@ document.onclick = (event) => {
           changeRenderCart(event.target.id);
      }
 }
-const sendArticle = async () => {
-   };
+
 function buttonCheckoutSubmitOnClick() {
      try {
           const name = document.getElementById('form-name-input').value;
@@ -61,7 +61,6 @@ function buttonCheckoutSubmitOnClick() {
           alert(err);
           return false;
      }
-   
 }
 
 function buttonCheckoutCloseOnClick() {
