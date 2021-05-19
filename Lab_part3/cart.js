@@ -6,6 +6,17 @@ let carName = ["LAMBORGHINI SIAN", "TESLA ROADSTER", "RENAULT ALPHINE", "CHEVROL
 let carPrice = [3600000, 400000, 270000, 110000, 2700000, 5800000, 
                 320000, 90000, 205000, 95000, 280000, 710000];
 
+function CreateElement (nameElement, idElement, innerText, parentId) {
+     let element = document.createElement(nameElement);
+     element.id = idElement;
+     element.innerText = innerText;
+     if (parentId == "body")
+          document.body.appendChild(element);
+     else
+          document.getElementById(parentId).appendChild(element);
+     return element;
+}
+
 document.onclick = (event) => {
      if (event.target.classList.contains('add-car')) {
           console.log(event.target.id);
@@ -25,7 +36,94 @@ document.onclick = (event) => {
           changeRenderCart(event.target.id);
      }
 }
+const sendArticle = async () => {
+   };
+function buttonCheckoutSubmitOnClick() {
+     try {
+          const name = document.getElementById('form-name-input').value;
+          const surname = document.getElementById('form-surname-input').value;
+          const patronymic = document.getElementById('form-patronymic-input').value;
+          const tel = document.getElementById('form-tel-input').value;
+          if (!name || !surname || !patronymic || !tel) {
+            alert('Пожалуйста, заполните все обязательные поля! ');
+            return false;
+          }
 
+          cart = {};
+          saveData();
+          cartIsEmpty();
+          document.getElementById("cart-body").remove();
+          //очищаем cart ///
+          buttonCheckoutCloseOnClick();
+          alert("Заказ успешно отравлен!");
+          return true;
+     } 
+     catch (err) {
+          alert(err);
+          return false;
+     }
+   
+}
+
+function buttonCheckoutCloseOnClick() {
+     document.getElementById("div-Checkout").remove();
+}
+
+function buttonCheckoutOnClick() {
+     CreateElement("div", "div-Checkout", "", "body").classList.add("checkout", "w-100", "h-100", "position-fixed", "d-flex",
+     "flex-wrap", "justify-content-center");
+
+      CreateElement("div", "div-Checkout-Background", "", "div-Checkout").classList.add("checkout-background", "w-100", "h-100", "position-absolute",
+      "bg-secondary");
+      CreateElement("div", "div-Checkout-item", "", "div-Checkout").classList.add("checkout-item", "d-block", "bg-white", "px-5", "mx-auto");
+
+      CreateElement("div", "div-Checkout-close", "", "div-Checkout-item").classList.add("d-flex", "justify-content-end", "ml-5", "w-100");
+      document.getElementById("div-Checkout-close").setAttribute('onclick', "buttonCheckoutCloseOnClick()");
+      CreateElement("div", "div-close", "", "div-Checkout-close").classList.add("feedback-close-item", "bg-white");
+      CreateElement("div", "close", "", "div-close").classList.add("close", "position-relative");
+      
+      CreateElement("h1", "div-Checkout-header", "Оформление заказа", "div-Checkout-item").classList.add("text-center", "font-weight-bolder", "mb-4");
+
+      CreateElement("form", "form", "", "div-Checkout-item");
+      CreateElement("div", "form-element-name", "", "form").classList.add("mb-3");
+      CreateElement("label", "form-name-label", "Имя *", "form-element-name").classList.add("form-label");
+      CreateElement("input", "form-name-input", "", "form-element-name").classList.add("form-control");
+      document.getElementById("form-name-input").setAttribute('type', "name");
+
+      CreateElement("div", "form-element-surname", "", "form").classList.add("mb-3");
+      CreateElement("label", "form-surname-label", "Фамилия *", "form-element-surname").classList.add("form-label");
+      CreateElement("input", "form-surname-input", "", "form-element-surname").classList.add("form-control");
+      document.getElementById("form-name-input").setAttribute('type', "name");
+
+      CreateElement("div", "form-element-patronymic", "", "form").classList.add("mb-3");
+      CreateElement("label", "form-patronymic-label", "Отчество *", "form-element-patronymic").classList.add("form-label");
+      CreateElement("input", "form-patronymic-input", "", "form-element-patronymic").classList.add("form-control");
+      document.getElementById("form-patronymic-input").setAttribute('type', "name");
+
+      CreateElement("div", "form-element-tel", "", "form").classList.add("mb-3");
+      CreateElement("label", "form-tel-label", "Телефон *", "form-element-tel").classList.add("form-label");
+      CreateElement("input", "form-tel-input", "", "form-element-tel").classList.add("form-control");
+      document.getElementById("form-tel-input").setAttribute('type', "number");
+
+      CreateElement("div", "form-element-delivery", "", "form").classList.add("mb-3", "btn-group");
+      CreateElement("label", "form-delivery-label", "Способ доставки *   ", "form-element-delivery").classList.add("form-label", "mr-3");
+      CreateElement("input", "form-delivery-input-1", "", "form-element-delivery").classList.add("d-none", "btn-check");
+      document.getElementById("form-delivery-input-1").setAttribute('type', "radio");
+
+      CreateElement("label", "form-delivery-label-1", "Самовывоз", "form-element-delivery").classList.add("btn", "btn-outline-primary");
+      document.getElementById("form-delivery-label-1").setAttribute('for', "form-delivery-input-1");
+
+      CreateElement("input", "form-delivery-input-2", "", "form-element-delivery").classList.add("d-none","btn-check");
+      document.getElementById("form-delivery-input-2").setAttribute('type', "radio");
+      CreateElement("label", "form-delivery-label-2", "Доставка домой", "form-element-delivery").classList.add("btn", "btn-outline-primary");
+      document.getElementById("form-delivery-label-2").setAttribute('for', "form-delivery-input-2");
+
+      CreateElement("div", "totalPrice", "Общая цена: "+calculateThePrice()+" $", "div-Checkout-item").classList.add("h3", "mt-n3", "text-center");
+
+      CreateElement("button", "form-button-submit", "Отправить", "div-Checkout-item").classList.add("btn", "btn-primary", "mx-auto", "w-100");
+      document.getElementById("form-button-submit").setAttribute('type', "submit");
+      document.getElementById("form-button-submit").setAttribute('onclick', "buttonCheckoutSubmitOnClick()");
+}
 function addCar(id, name, classImg, price) {
      if (!cart[id]) {
           cart[id] = {
@@ -59,16 +157,6 @@ const deleteFunction = (id) => {
           document.getElementById("car"+id).remove();
 }
 
-function CreateElement (nameElement, idElement, innerText, parentId) {
-     let element = document.createElement(nameElement);
-     element.id = idElement;
-     element.innerText = innerText;
-     if (parentId == "body")
-          document.body.appendChild(element);
-     else
-          document.getElementById(parentId).appendChild(element);
-     return element;
-}
 
 function isEmpty(obj) {
      for(var prop in obj) {
@@ -104,9 +192,10 @@ const renderCart = () => {
           CreateElement("div", "count", "Количество", "cart-header").classList.add("col-3", "text-center");
           CreateElement("div", "price", "Цена", "cart-header").classList.add("col-2", "text-center");
 
+          CreateElement("div", "cart-body", "", "cart-div").classList.add("row", "w-100", "ml-0");
           for (element in cart) {
                if (cart[element] != null) {
-                    CreateElement("div", "car"+element, "", "cart-div").classList.add("row", "w-100", "ml-0", "py-2");
+                    CreateElement("div", "car"+element, "", "cart-body").classList.add("row", "w-100", "ml-0", "py-2");
                     CreateElement("div", "carId"+element, element, "car"+element).classList.add("col-1", "text-center", "m-auto");
                     CreateElement("div", "carImg"+element, "", "car"+element).classList.add("col-3", "product-img", cart[element]["classImg"]);
                     CreateElement("div", "carName"+element, cart[element]["name"], "car"+element).classList.add("col-3", "h4", "text-center", "m-auto");
@@ -118,6 +207,9 @@ const renderCart = () => {
                }
           }
           CreateElement("div", "totalPrice", "Общая цена: "+price+" $", "cart-div").classList.add("row", "ml-0", "h3", "mt-3", "mx-auto");
+          CreateElement("button", "checkout", "Оформить заказ", "cart-div").classList.add( "btn", "btn-primary", "mx-auto");
+          document.getElementById("checkout").setAttribute('onclick', "buttonCheckoutOnClick()");
+
           if (!price)
                cartIsEmpty();
      }
@@ -126,6 +218,7 @@ const renderCart = () => {
 const cartIsEmpty = () => {
      document.getElementById("totalPrice").remove();
      document.getElementById("cart-header").remove();
+     document.getElementById("checkout").remove();
      CreateElement("div", "empty-cart", "Корзина пуста", "cart-div").classList.add("row", "w-100", "mx-auto", "font-weight-bolder", "h2", "align-center");
 }
 
