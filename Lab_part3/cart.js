@@ -48,7 +48,6 @@ function buttonCheckoutSubmitOnClick() {
             alert('Пожалуйста, заполните все обязательные поля! ');
             return false;
           }
-
           cart = {};
           saveData();
           cartIsEmpty();
